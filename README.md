@@ -23,6 +23,9 @@
 
 
 ---
+## 🚀 Deployment: [Deployment Link](https://khalinsurancepredict-029.streamlit.app/)
+
+---
 
 ## 📌 Problem Background
 Healthcare costs in the United States are extremely high. A single illness such as **cancer or heart surgery** can exceed **$100,000**, forcing families to drain savings, sell property, or even go bankrupt.  
@@ -102,6 +105,7 @@ from utils import replaceBMI
 - [NCBI - The Cost of Cancer Care](https://khalinsurancepredict-029.streamlit.app/)
 - [KFF - Americans’ Challenges with Health Care Costs](https://www.ncbi.nlm.nih.gov/books/NBK223643/)
 - [Healthcare Cost](https://www.kff.org/health-costs/issue-brief/americans-challenges-with-health-care-costs/)
+
 
 
 
