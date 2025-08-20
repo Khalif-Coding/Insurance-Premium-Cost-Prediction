@@ -13,15 +13,12 @@
     │   └── requirement.txt  
     │   └── BestRFR.pkl
     │   └── utils.py
-    ├── description.md
     ├── P1M2_Khalif.ipynb
     ├── P1M2_Khalif_Inference.ipynb
     └── Medicalpremium.pcsv
-    ├── conceptual.txt
     └── README.md
     └── BestRFR.pkl
     └── utils.py
-    ├── url.txt
 ```
 
 
@@ -105,4 +102,5 @@ from utils import replaceBMI
 - [NCBI - The Cost of Cancer Care](https://khalinsurancepredict-029.streamlit.app/)
 - [KFF - Americans’ Challenges with Health Care Costs](https://www.ncbi.nlm.nih.gov/books/NBK223643/)
 - [Healthcare Cost](https://www.kff.org/health-costs/issue-brief/americans-challenges-with-health-care-costs/)
+
 
