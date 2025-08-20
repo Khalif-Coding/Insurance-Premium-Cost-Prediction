@@ -1,6 +1,7 @@
-# Milestone 2 - Predict Insurance (Annual) Price
+# 🏥 Insurance Premium Prediction (Annual Price)
 
-## Repository Outline
+## 📂 Repository Outline
+
 ```
     p1-ftds029-hck-m2-Khalif-Coding 
     ├── deployment/
@@ -23,49 +24,84 @@
     ├── url.txt
 ```
 
-## Problem Background
 
-Banyak orang menganggap remeh betapa mahalnya biaya perawatan kesehatan. Yang ternyata di US satu penyakit seperti kanker atau operasi jantung bisa menghabiskan biaya lebih dari $100.000, sehingga memaksa keluarga untuk menguras tabungan, menjual rumah, atau bahkan menjadi bangkrut. Dengan menggunakan asuransi, itu melindungi keluarga dengan menanggung sebagian besar biaya ini. Walaupun premi tetap mengacu pada faktor pribadi seperti usia, BMI, kebiasaan merokok, dan jumlah tanggungannya. 
+---
 
-Untuk itu saya akan membantu orang untuk memprediksi harga premi tahunan sehingga suatu keluarga bisa memperkirakan biaya asuransi mereka berdasarkan faktor-faktor ini, sehingga mereka dapat merencanakan ke depan dan menghindari bencana finansial akibat tagihan medis yang tak terduga.
+## 📌 Problem Background
+Healthcare costs in the United States are extremely high. A single illness such as **cancer or heart surgery** can exceed **$100,000**, forcing families to drain savings, sell property, or even go bankrupt.  
 
-## Project Output
+Insurance helps mitigate these risks by covering most of the medical expenses. However, **insurance premiums** are determined by personal factors such as **age, BMI, smoking habits, and number of dependents**.  
 
-Memberikan Prediksi Terkait Harga Premi Tahunan Yang Dipengaruhi Oleh Beberapa Kondisi Yang Dialami Individu.
+This project aims to **predict annual insurance premiums** based on these personal factors, so families can estimate future costs and prepare for unexpected medical bills.  
 
-## Data
-Dataset: https://www.kaggle.com/datasets/mirichoi0218/insurance?resource=download
-Dataset ini adalah Informasi Existing Harga Premi Asuransi.
-Shape Dataset: 11 Columns , 986 Rows
-Type Columns: 4 Numerikal Dan 7 Kategorikal
-Null & Duplicated Values  : 0
+---
 
-## Method
-1. Supervised : Regression
-2. Model: KNR, SVR, Decision Tree Regressor, Random Forest Regressor, Gradient Boosting Regressor 
+## 🎯 Project Output
+- A machine learning model that **predicts annual insurance premium costs**  
+- Insights into which personal factors most strongly influence insurance pricing  
+- A deployed **Streamlit app** for interactive prediction  
 
-## Stacks
-1. import pandas as pd
-2. import numpy as np
-3. import matplotlib.pyplot as plt
-4. import seaborn as sns
-5. from sklearn.model_selection import train_test_split
-6. from statsmodels.stats.outliers_influence import variance_inflation_factor
-7. from scipy.stats import kendalltau
-8. from sklearn.preprocessing import StandardScaler, MinMaxScaler, FunctionTransformer
-9. from sklearn.preprocessing import OneHotEncoder
-10. from sklearn.compose import ColumnTransformer
-11. from sklearn.pipeline import Pipeline
-12. from sklearn.model_selection import cross_val_score, GridSearchCV
-13. from sklearn.metrics import make_scorer, mean_absolute_percentage_error,mean_absolute_error
-14. import pickle
-15. from sklearn.neighbors import KNeighborsRegressor
-16. from sklearn.svm import SVR
-17. from sklearn.tree import DecisionTreeRegressor
-18. from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-19. from utils import replaceBMI
+---
 
-## Reference
-1. https://khalinsurancepredict-029.streamlit.app/
-2. https://www.ncbi.nlm.nih.gov/books/NBK223643/
-3. https://www.kff.org/health-costs/issue-brief/americans-challenges-with-health-care-costs/
+## 📊 Data
+- **Dataset Link:** [Kaggle - Insurance Dataset](https://www.kaggle.com/datasets/mirichoi0218/insurance?resource=download)  
+- **Shape:** 986 rows × 11 columns  
+- **Features:** 4 numerical, 7 categorical  
+- **Null & Duplicates:** None  
+
+---
+
+## ⚙️ Method
+- **Approach:** Supervised Regression  
+- **Models Tested:**  
+  - K-Nearest Regressor (KNR)  
+  - Support Vector Regressor (SVR)  
+  - Decision Tree Regressor  
+  - Random Forest Regressor  
+  - Gradient Boosting Regressor  
+- **Best Model:** Random Forest Regressor (`BestRFR.pkl`)  
+
+---
+
+## 🛠️ Tech Stacks
+
+### 🔹 Languages
+- Python  
+- Pandas  
+- NumPy  
+
+### 🔹 Tools
+- Jupyter Notebook  
+- Streamlit  
+- Scikit-learn  
+- Pickle  
+
+### 🔹 Libraries
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, OneHotEncoder, FunctionTransformer
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import mean_absolute_percentage_error, mean_absolute_error
+
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from scipy.stats import kendalltau
+
+import pickle
+from utils import replaceBMI
+```
+
+📖 References
+NCBI - The Cost of Cancer Care
+KFF - Americans’ Challenges with Health Care Costs
+Kaggle - Insurance Premium Dataset
